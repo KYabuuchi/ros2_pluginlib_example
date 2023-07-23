@@ -10,7 +10,7 @@ public:
   PluginLoader() : Node("plugin_loader"),
                    plugin_loader_("base_interface", "base_interface::BaseInterface")
   {
-    const std::string plugin_name = declare_parameter<std::string>("plugin_name", "user_defined_plugin::UserDefinedPlugin1");
+    const std::string plugin_name = declare_parameter<std::string>("plugin_name", "plugin1");
     load_plugin(*this, plugin_name);
 
     auto on_timer = [this]() -> void {
@@ -18,7 +18,7 @@ public:
         plugin_->execute();
       }
     };
-    timer_ = rclcpp::create_timer(this, this->get_clock(), rclcpp::Rate(5).period(), std::move(on_timer));
+    timer_ = rclcpp::create_timer(this, this->get_clock(), rclcpp::Rate(1).period(), std::move(on_timer));
   }
 
 private:

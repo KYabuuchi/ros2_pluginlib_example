@@ -1,4 +1,4 @@
 <library path="user_defined_plugin">
-  <class type="user_defined_plugin::UserDefinedPlugin1" base_class_type="base_interface::BaseInterface"/>
-  <class type="user_defined_plugin::UserDefinedPlugin2" base_class_type="base_interface::BaseInterface"/>
+  <class name="plugin1" type="user_defined_plugin::UserDefinedPlugin1" base_class_type="base_interface::BaseInterface"/>
+  <class name="plugin2" type="user_defined_plugin::UserDefinedPlugin2" base_class_type="base_interface::BaseInterface"/>
 </library>
