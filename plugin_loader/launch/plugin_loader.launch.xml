@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="plugin_loader" exec="plugin_loader" name="loader1" output="screen">
+        <param name="plugin_name" value="user_defined_plugin::UserDefinedPlugin1"/>
+    </node>
+
+    <node pkg="plugin_loader" exec="plugin_loader" name="loader2" output="screen">
+        <param name="plugin_name" value="user_defined_plugin::UserDefinedPlugin2"/>
+    </node>
+</launch>
